@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--yellow);
+  font-family: 'Figtree', sans-serif;
+}
+
+.card {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 375px;
+  max-height: fit-content;
+  padding: 25px;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  box-shadow: 10px 10px var(--black);
+}
+
+.logo {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--yellow);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 20px 0;
+  text-decoration: none;
+  color: var(--black);
+}
+
+a:hover {
+  color: var(--yellow);
+}
+
+.description {
+  color: var(--grey);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.author * {
+  margin-bottom: 0;
+}
+
+.avatar {
+  max-width: 32px;
+  aspect-ratio: 1;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 800;
+}
