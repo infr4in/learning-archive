@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #f3f3f3;
+    background-image: url("https://wallpapers.com/images/hd/dark-pixel-1r4svmhtcs3rnbjo.jpg");
+    background-size: cover;
+  }
+  
+  #container {
+    width: 40%;
+    margin: 2rem auto;
+  }
+  
+  #survey-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px 0 black;
+    padding: 3rem;
+  }
+  
+  #title,
+  #description {
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+  }
+  
+  #title {
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+  
+  #description {
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .small {
+    color: #e4e4e4;
+    font-size: 0.9rem;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    min-height: 2rem;
+  }
+  
+  textarea {
+    min-height: 120px;
+    padding: 0.25rem 0.75rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    border-radius: 0.25rem;
+    border: none;
+    color: #495057;
+    padding: 0.25rem 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline-block;
+    width: unset;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    margin-right: 0.5rem;
+  }
+  
+  label {
+    display: block;
+    width: 100%;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  input[type="submit"] {
+    color: #f3f3f3;
+    background-color: hsl(21,55%,48%);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }

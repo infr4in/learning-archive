@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-color: #151515;
+  color: #dadada;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 250px;
+  width: 375px;
+  border-right: 1px solid #323232;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+#navbar img {
+  display: inline;
+  max-height: 45px;
+  margin-right: 0.7rem;
+}
+
+#navbar ul {
+  padding-inline-start: 98px;
+  
+}
+
+#navbar li {
+  font-size: 1.8rem;
+  list-style: none;
+  padding: 1rem 1rem;
+}
+
+#navbar a {
+  color: #7c8590;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: #a68af9
+}
+
+#main-doc {
+  margin-left: 390px;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+#main-doc a {
+  color: #8a5cf5;
+}
+
+#main-doc a:hover {
+  color: #a68af9;
+}
+
+#main-doc ul {
+  padding-inline-start: 40px;
+}
+
+#main-doc li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+header {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+article {
+  margin: 1.5rem;
+}
+
+article * {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+code {
+  display: block;
+  background-color: #242424;
+  color: #7c8590;
+  font-size: 1.4rem;
+  white-space: pre-line;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+code.inline {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+}
+
+.pink {
+  color: #fa99cd;
+}
+
+.blue {
+  color: #53dfdd;
+}
+
+.yellow {
+  color: #e0de71;
+}
+
+.green {
+  color: #44cf6e;
+}
+
+.red {
+  color: #fb464c;
+}
+
+.spacing-4 {
+  display: inline-block;
+  width: 3.2rem;
+}
+
+.spacing-8 {
+  display: inline-block;
+  width: 6.4rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+ 
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: #383838; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555; 
+}
+
+@media only screen and (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-right: none;
+    overflow-y: visible;
+    overflow-x: visible;
+  }
+
+  #navbar ul {
+    padding-inline-start: 40px;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    border-bottom: 1px solid #383838;
+    border-top: 1px solid #383838;
+  }
+
+  #main-doc {
+    margin-left: 0px;
+    margin-top: 270px;
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      <img src="./assets/images/turtle.png" />
+      Turtle graphics
+    </header>
+    <ul>
+      <li>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Tutorial">Tutorial</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Starting_a_turtle_environment">Starting a turtle environment</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Basic_drawing">Basic drawing</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Pen_control">Pen control</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#The_turtle's_position">The turtle's position</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Making_algorithmic_patterns">Making algorithmic patterns</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#...">...</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Turtle_methods">Turtle methods</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Reference">Reference</a>
+      </li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          Turtle graphics is an implementation of the popular geometric drawing tools 
+          introduced in Logo, developed by Wally Feurzeig, Seymour Papert and Cynthia 
+          Solomon in 1967.
+        </p>
+        <p>
+          In Python, turtle graphics provides a representation of a physical “turtle” 
+          (a little robot with a pen) that draws on a sheet of paper on the floor.
+        </p>
+        <p>
+          It's an effective and well-proven way for learners to encounter programming 
+          concepts and interaction with software, as it provides instant, visible feedback. 
+          It also provides convenient access to graphical output in general.
+        </p>
+        <p>
+          Turtle drawing was originally created as an educational tool, to be used 
+          by teachers in the classroom. For the programmer who needs to produce some 
+          graphical output it can be a way to do that without the overhead of introducing 
+          more complex or external libraries into their work.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Tutorial">
+      <header>Tutorial</header>
+      <article>
+        <p>
+          New users should start here. In this tutorial we'll explore some of the basics 
+          of <code class="inline">turtle</code> drawing.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Starting_a_turtle_environment">
+      <header>Starting a turtle environment</header>
+      <article>
+        <p>
+          In a Python shell, import all the objects of the turtle module:
+        </p>
+        <code><span class="pink">from</span> turtle <span class="pink">import *</span>
+        </code>
+        <p>
+          If you run into a <code class="inline">No module named '_tkinter'</code> error, you'll have to install the 
+          <a href="https://docs.python.org/3/library/tkinter.html#module-tkinter">Tk interface package</a> 
+          on your system.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Basic_drawing">
+      <header>Basic drawing</header>
+      <article>
+        <p>
+          Send the turtle forward 100 steps:
+        </p>
+        <code>forward(<span class="blue">100</span>)
+        </code>
+        <p>
+          You should see (most likely, in a new window on your display) a line drawn by the turtle, heading East. 
+          Change the direction of the turtle, so that it turns 120 degrees left (anti-clockwise):
+        </p>
+        <code>left(<span class="blue">120</span>)
+        </code>
+        <p>
+          Let's continue by drawing a triangle:
+        </p>
+        <code>forward(<span class="blue">100</span>)
+          left(<span class="blue">120</span>)
+          forward(<span class="blue">100</span>)
+        </code>
+        <p>
+          Notice how the turtle, represented by an arrow, points in different directions as you steer it.
+        </p>
+        <p>
+          Experiment with those commands, and also with <code class="inline">backward()</code> and 
+          <code class="inline">right()</code>.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Pen_control">
+      <header>Pen control</header>
+      <article>
+        <p>
+          Try changing the color - for example, <code class="inline">color('blue')</code> - and width 
+          of the line - for example, <code class="inline">width(3)</code> - and then drawing again.
+        </p>
+        <p>
+          You can also move the turtle around without drawing, by lifting up the pen: 
+          <code class="inline">up()</code> before moving. To start drawing again, use <code class="inline">down()</code>.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="The_turtle's_position">
+      <header>The turtle's position</header>
+      <article>
+        <p>
+          Send your turtle back to its starting-point (useful if it has disappeared off-screen):
+        </p>
+        <code>home()
+        </code>
+        <p>
+          The home position is at the center of the turtle's screen. If you ever need to know them, get the turtle's 
+          x-y co-ordinates with:
+        </p>
+        <code>pos()
+        </code>
+        <p>
+          Home is at <code class="inline">(0, 0)</code>.
+        </p>
+        <p>
+          And after a while, it will probably help to clear the window so we can start anew:
+        </p>
+        <code>clearscreen()
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="Making_algorithmic_patterns">
+      <header>Making algorithmic patterns</header>
+      <article>
+        <p>
+          Using loops, it's possible to build up geometric patterns:
+        </p>
+        <code>for steps in range(<span class="blue">100</span>):
+        <span class="spacing-4"></span><span class="pink">for</span> c <span class="pink">in</span> (<span class="green">'blue', 'red', 'green'</span>):
+        <span class="spacing-8"></span>color(c)
+        <span class="spacing-8"></span>forward(steps)
+        <span class="spacing-8"></span>right(<span class="blue">30</span>)
+        </code>
+        <p>
+          - which of course, are limited only by the imagination!
+        </p>
+        <p>
+          Let's draw the star shape at the top of this page. We want red lines, filled in with yellow:
+        </p>
+        <code>color(<span class="green">'red'</span>)
+          fillcolor(<span class="green">'yellow'</span>)
+        </code>
+        <p>
+          Just as <code class="inline">up()</code> and <code class="inline">down()</code> determine 
+          whether lines will be drawn, filling can be turned on and off:
+        </p>
+        <code>begin_fill()
+        </code>
+        <p>
+          Next we'll create a loop:
+        </p>
+        <code><span class="pink">while True</span>:
+          <span class="spacing-4"></span>forward(<span class="blue">200</span>)
+          <span class="spacing-4"></span>left(<span class="blue">170</span>)
+          <span class="spacing-4"></span><span class="pink">if</span> abs(pos()) <span class="red"><</span> <span class="blue">1</span>:
+          <span class="spacing-8"></span><span class="pink">break</span>
+        </code>
+        <p>
+          <code class="inline">abs(pos()) < 1</code> is a good way to know when the turtle is back at its home position.
+        </p>
+        <p>
+          Finally, complete the filling:
+        </p>
+        <code>end_fill()
+        </code>
+        <p>(Note that filling only actually takes place when you give the <code class="inline">end_fill()</code> command.)</p>
+      </article>
+    </section>
+    <section class="main-section" id="...">
+      <header>...</header>
+      <article>
+        <p>...</p>
+        <code>...</code>
+      </article>
+    </section>
+    <section class="main-section" id="Turtle_methods">
+      <header>Turtle methods</header>
+      <article>
+        <p>Turtle motion</p>
+        <ul>
+          <li style="list-style: none;">Move and draw
+            <ul style="margin-top: 1.5rem;">
+              <li><a href="#">forward() | fd()</a></li>
+              <li><a href="#">backward() | bk() | back()</a></li>
+              <li><a href="#">right() | rt()</a></li>
+              <li><a href="#">left() | lt()</a></li>
+              <li><a href="#">goto() | setpos() | setposition()</a></li>
+              <li><a href="#">...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <p>All the documentation in this page is taken from 
+          <a href="https://docs.python.org/3/library/turtle.html#module-turtle" target="_blank">Python</a>
+        </p>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>
