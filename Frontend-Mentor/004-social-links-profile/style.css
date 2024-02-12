@@ -1,0 +1,181 @@
+:root {
+  --clr-primary: hsl(75, 94%, 57%);
+
+  --clr-neutral-1: hsl(0, 0%, 100%);
+  --clr-neutral-2: hsl(0, 0%, 20%);
+  --clr-neutral-3: hsl(0, 0%, 12%);
+  --clr-neutral-4: hsl(0, 0%, 8%);
+
+  --ff-base: 'Inter', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* RESET */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* GENERAL */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--clr-neutral-1);
+  background-color: var(--clr-neutral-4);
+
+  /* for this project only */
+  display: grid;
+  place-content: center;
+}
+
+/* BUTTONS */
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75em 1.5em;
+  background-color: var(--clr-neutral-2);
+  color: var(--clr-neutral-1);
+  font-weight: var(--fw-semibold);
+  font-size: 0.925rem;
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-3)
+}
+
+/* PROFILE STYLES */
+.profile {
+  --content-padding: 1.5rem;
+  --content-spacing: 1.5rem;
+
+  display: grid;
+  gap: var(--content-spacing);
+  padding: var(--content-padding);
+  background-color: var(--clr-neutral-3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  min-width: 330px;
+  max-width: 600px;
+}
+
+.profile__image {
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.profile__image img {
+  max-width: 80px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile__content {
+  display: grid;
+  gap: var(--content-spacing);
+  place-items: center;
+}
+
+.profile__user {
+  display: grid;
+  gap: 0.5em;
+  place-items: center;
+}
+
+.user__name {
+  font-size: 1.48rem;
+}
+
+.user__location {
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary);
+}
+
+.profile__links {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+}
+
+@media (min-width: 600px) {
+  .profile {
+    --content-padding: 2.5rem;
+    min-width: 400px;
+  }
+}
