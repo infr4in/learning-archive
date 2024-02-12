@@ -140,7 +140,7 @@ body {
 }
 
 .profile__image img {
-  max-width: 80px;
+  max-width: 100px;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
