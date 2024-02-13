@@ -110,6 +110,7 @@ body {
 }
 
 .button {
+  font-weight: var(--fw-semibold); 
   color: var(--clr-neutral-white); 
   line-height: 1;
   background: var(--clr-neutral-dark-blue);
@@ -182,6 +183,10 @@ body {
 
 .summary {
   padding: var(--padding);
+}
+
+.summary .section-title {
+  color: var(--clr-neutral-dark-blue);
 }
 
 .summary-item {
