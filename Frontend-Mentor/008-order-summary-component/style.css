@@ -1,0 +1,238 @@
+:root {
+  --clr-primary-100: hsl(225, 100%, 94%);
+  --clr-primary-200: hsl(225, 60%, 96%);
+  --clr-primary-400: hsl(245, 75%, 52%);
+
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-400: hsl(224, 23%, 55%);
+  --clr-neutral-700: hsl(223, 47%, 23%);
+
+  --clr-hover: hsl(245, 82.6%, 68.4%);
+  --clr-button-shadow: hsl(245, 82.6%, 85.4%);
+
+  --ff-base: "Red Hat Display", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/* reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary-100);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: repeat-x;
+  
+
+  /* this project only */
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+
+@media (max-width: 450px) {
+  body {
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+/* utiliry */
+.flex-group {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.column-direction {
+  flex-direction: column;
+  align-items: start;
+}
+
+.small-gap {
+  gap: 1.5rem;
+}
+
+@media (max-width: 450px) {
+  .small-gap {
+    gap: 1.25rem;
+  }
+}
+
+/* buttons */
+button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 1rem 0;
+  font-weight: var(--fw-bold);
+}
+
+button.order__proceed {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  margin-top: 0.5rem;
+  box-shadow: 0 0.5rem 1rem 0 var(--clr-button-shadow);
+}
+
+button.order__proceed:is(:hover, :focus) {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-hover);
+}
+
+button.order__cancel {
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-neutral-100);
+  padding: 0;
+}
+
+button.order__cancel:is(:hover, :focus) {
+  color: var(--clr-neutral-700);
+}
+
+/* order styling */
+.order {
+  display: grid;
+  text-align: center;
+  max-width: 450px;
+  background: var(--clr-neutral-100);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem 0 var(--clr-button-shadow);
+  overflow: hidden;
+  
+  /* this project only */
+  margin: 6rem 0;
+}
+
+.order__summary {
+  display: grid;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+@media (max-width: 450px) {
+  .order__summary {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.order__title {
+  font-weight: var(--fw-black);
+  color: var(--clr-neutral-700)
+}
+
+.order__info {
+  line-height: 1.7;
+  padding: 0 1rem;
+}
+
+.order__plan {
+  background: var(--clr-primary-200);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 450px) {
+  .order__plan {
+    padding: 1rem;
+  }
+}
+
+.order__plan-type {
+  font-weight: var(--fw-black);
+  color: var(--clr-neutral-700);
+}
+
+.order__change {
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-400)
+}
+
+.order__change:is(:hover, :focus) {
+  text-decoration: none;
+  color: var(--clr-hover)
+}
