@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Push Button</title>
+</head>
+<body>
+  <div class="cssb-frame">
+    <div class="rectangle">
+      <div class="circle-outer-border">
+        <div class="circle-outer">
+          <div class="circle-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>  
+    .rectangle {
+      position: relative;
+      top: 75px;
+      left: 50px;
+      background-color: #243D83;
+      width: 300px;
+      height: 150px;
+    }
+
+    .circle-outer-border {
+      position: absolute;
+      top: -50px;
+      left: 25px;
+      background-color: #6592CF;
+      width: 250px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    .circle-outer {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #243D83;
+      width: 150px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    .circle-inner {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #EEB850;
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    .cssb-frame {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 400px;
+      height: 300px;
+      background-color: #6592CF;
+    }
+  </style>
+</body>
+</html>

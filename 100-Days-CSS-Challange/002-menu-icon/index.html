@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Days CSS Challange - Day 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="frame">
+    <div class="center">
+      <div class="menu-icon">
+        <div class="line line-1 no-animation"></div>
+        <div class="line line-2 no-animation"></div>
+        <div class="line line-3 no-animation"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+
+      menuIcon.addEventListener("click", () => {
+      menuIcon.classList.toggle("active");
+      menuIcon.querySelectorAll("div").forEach((element) => element.classList.remove("no-animation"));
+    });
+  </script>
+</body>
+
+</html>

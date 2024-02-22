@@ -1,0 +1,105 @@
+:root {
+  --clr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-very-dark-blue: hsl(229, 23%, 23%);
+  --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --clr-dark-gray: hsla(0, 0%, 59%, .3);
+
+  --clr-dark-cyan-shadow: hsl(185, 75%, 30%);
+
+  --fs-headline: calc(18 / 16 * 1rem);
+
+  --ff-main: "Kumbh Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-grayish-blue);
+  background-color: var(--clr-dark-cyan);
+  background-image:
+    url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-repeat: 
+    no-repeat, 
+    no-repeat;
+  background-position:
+    right 48vw bottom 40vh,
+    left 45vw top 44vh;
+
+  /* this project only */
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 2rem);
+  margin: 1rem;
+}
+
+/* profile card styling */
+.profile {
+  max-width: 350px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 5rem 0 var(--clr-dark-cyan-shadow);
+}
+
+.profile__image {
+  width: 112px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-top: -60px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.profile__title {
+  font-size: var(--fs-headline);
+  font-weight: var(--fw-bold);
+  color: var(--clr-very-dark-blue);
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile__age {
+  font-weight: 500;
+  color: var(--clr-dark-grayish-blue);
+  margin-left: 0.5ch;
+}
+
+.profile__stats {
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  align-items: center;
+  padding: 1.7rem 2rem;
+  margin-top: 1.7rem;
+  border-top: 1.5px solid var(--clr-dark-gray);
+}
+
+.profile__stats li {
+  flex: 1;
+}
+
+.profile__stat-num {
+  font-size: var(--fs-headline);
+  font-weight: var(--fw-bold);
+  color: var(--clr-very-dark-blue);
+}
+
+.profile__stat-label {
+  letter-spacing: 0.1rem;
+  font-size: 0.65rem;
+  margin-top: 0.8ch;
+}

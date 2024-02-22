@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forking Crazy</title>
+</head>
+<body>
+  <div class="cssb-frame">
+    <div class="fork">
+      <div class="head-base"></div>
+      <div class="head-spear a"></div>
+      <div class="head-spear inner aa"></div>
+      <div class="head-spear b"></div>
+      <div class="head-spear inner bb"></div>
+      <div class="head-spear c"></div>
+      <div class="head-spear inner cc"></div>
+      <div class="head-spear d"></div>
+      <div class="neck"></div>
+    </div>
+  </div>
+  <style>  
+    .cssb-frame {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 400px;
+      height: 300px;
+      background-color: #6592CF;
+    }
+    
+    .fork {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+    }
+
+    .fork * {
+      position: absolute;
+      background-color: #060F55;
+    }
+
+    .head-base {
+      position: absolute;
+      bottom: 50px;
+      width: 140px;
+      height: 140px;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .head-spear {
+      bottom: 140px;
+      width: 20px;
+      height: 110px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .inner {
+      background-color: #6592CF;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .a {
+      left: 130px;
+    }
+
+    .b {
+      left: 170px;
+    }
+
+    .c {
+      left: 210px;
+    }
+
+    .d {
+      left: 250px;
+    }
+
+    .aa {
+      left: 150px;
+    }
+
+    .bb {
+      left: 190px;
+    }
+
+    .cc {
+      left: 230px;
+    }
+
+    .neck {
+      width: 20px;
+      height: 60px;
+    }
+  </style>
+</body>
+</html>

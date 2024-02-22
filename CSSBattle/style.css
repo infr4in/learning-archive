@@ -1,0 +1,223 @@
+:root {
+  --clr-body-bg: #151a1f;
+  --clr-card-border: #27313a;
+  --clr-frame-border: #111217;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+/* general styling */
+body {
+  background-color: var(--clr-body-bg);
+
+  display: grid;
+  place-items: center;
+}
+
+/* card container styling */
+.cards {
+  --frame-width: 400px;
+
+  --card-gap: 2rem;
+  --card-padding: 1rem;
+
+  --container-width: 905px;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--container-width);
+  gap: var(--card-gap);
+  margin: 1rem;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.cards::after {
+  content: "";
+  width: var(--frame-width);
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--clr-body-bg);
+  padding: 1rem;
+}
+
+.cards li {
+  position: relative;
+  width: var(--frame-width);
+  aspect-ratio: 4 / 3;
+  background-color: var(--clr-body-bg);
+  border: 2px solid var(--clr-card-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition-duration: 200ms;
+}
+
+/*.cards li:hover {
+  cursor: not-allowed;
+  transform: scale(1.1);
+  z-index: 1;
+}*/
+
+.cssb-frame {
+  position: absolute; 
+  inset: 0;
+  margin: auto;
+  width: var(--frame-width);
+  aspect-ratio: 4 / 3;
+  border: 3px solid var(--clr-frame-border);
+  border-radius: 0.5rem;
+  /*transform: scale(0.5) translate(-172px);*/
+}
+
+/* CSSBattle code */
+#card1 {
+  .cssb-frame {
+    background: #5d3a3a;
+
+    & div {
+      width:200px;
+      height: 200px;
+      background: #b5e0ba;
+    }
+  }
+}
+
+#card2 {
+  .cssb-frame {
+    background-color: #62374e;
+
+    & div {
+      width: 50px;
+      height: 50px;
+      background: #fdc57b;
+    }
+  
+    #a {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  
+    #b {
+      position: absolute;
+      top: 50px;
+      left: 300px;
+    }
+  
+    #c {
+      position: absolute;
+      top: 200px;
+      left: 50px;
+    }
+  
+    #d {
+      position: absolute;
+      top: 200px;
+      left: 300px;
+    }
+  }
+}
+
+#card3 {
+  .cssb-frame {
+    background-color: #6592CF;
+    
+    .rectangle {
+      position: relative;
+      top: 75px;
+      left: 50px;
+      background-color: #243D83;
+      width: 300px;
+      height: 150px;
+    }
+  
+    .circle-outer-border {
+      position: absolute;
+      top: -50px;
+      left: 25px;
+      background-color: #6592CF;
+      width: 250px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+  
+    .circle-outer {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #243D83;
+      width: 150px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+  
+    .circle-inner {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #EEB850;
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+  }
+}
+
+#card4 {
+  .cssb-frame {
+    background-color: #E3516E;
+    display: grid;
+    place-items: center;
+
+    & div {
+      border-top: 100px solid #51B5A9;
+      border-bottom: 100px solid #E3516E;
+      border-left: 100px solid #F7F3D7;
+      border-right: 100px solid #FADE8B;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+#card5 {
+  .cssb-frame {
+    background-color: #0B2429;
+
+    & div {
+      width: 120px;
+      height: 120px;
+      background-color: #F3AC3C;
+      border-radius: 50% 0 50% 50%;
+    }
+  
+    #a {
+      position: absolute;
+      top: 150px;
+      left: 80px;
+    }
+  
+    #b {
+      position: absolute;
+      top: 90px;
+      left: 140px;
+      background-color: #998235;
+    }
+  
+    #c {
+      position: absolute;
+      top: 30px;
+      left: 200px;
+      border-radius: 50% 50% 50% 50%;
+    }
+  }     
+}
+
+
+

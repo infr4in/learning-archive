@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing Slice</title>
+</head>
+<body>
+  <div class="cssb-frame">
+    <div></div>
+  </div>
+  <style>
+    .cssb-frame div {
+      border-top: 100px solid #51B5A9;
+      border-bottom: 100px solid #E3516E;
+      border-left: 100px solid #F7F3D7;
+      border-right: 100px solid #FADE8B;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+    }
+
+    .cssb-frame {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 400px;
+      height: 300px;
+      background-color: #E3516E;
+      display: grid;
+      place-items: center;
+    }
+  </style>
+</body>
+</html>
