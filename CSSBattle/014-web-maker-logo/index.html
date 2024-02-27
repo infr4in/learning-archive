@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forking Crazy</title>
+</head>
+<body>
+  <div class="cssb-frame">
+    <div class="t1 a2"></div>
+    <div class="t1 a1"></div>
+    <div class="t2 b2"></div>
+    <div class="t2 b1"></div>
+  </div>
+  <style>  
+    .cssb-frame {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 400px;
+      height: 300px;
+      background-color: #F2F2B6;
+      display: grid;
+      place-items: center;
+    }
+
+    .cssb-frame * {
+      position: absolute;
+    }
+    
+    .t1 {
+      border-top: 130px solid #FD4602;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+    }
+
+    .t2 {
+      border-bottom: 130px solid #FD4602;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+    }
+
+    .a1 {
+      left: 60px;
+      border-top-color: #FF6D00;
+    }
+
+    .a2 {
+      left: 80px;
+    }
+
+    .b1 {
+      left: 170px;
+    }
+
+    .b2 {
+      left: 190px;
+      border-bottom-color: #FF6D00;
+    }
+  </style>
+</body>
+</html>

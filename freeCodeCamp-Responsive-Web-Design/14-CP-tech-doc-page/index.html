@@ -117,9 +117,11 @@
         <p>
           Let's continue by drawing a triangle:
         </p>
-        <code>forward(<span class="blue">100</span>)
-          left(<span class="blue">120</span>)
-          forward(<span class="blue">100</span>)
+        <code>
+          <pre>
+forward(<span class="blue">100</span>)
+left(<span class="blue">120</span>)
+forward(<span class="blue">100</span>)</pre>
         </code>
         <p>
           Notice how the turtle, represented by an arrow, points in different directions as you steer it.
@@ -173,11 +175,13 @@
         <p>
           Using loops, it's possible to build up geometric patterns:
         </p>
-        <code>for steps in range(<span class="blue">100</span>):
-        <span class="spacing-4"></span><span class="pink">for</span> c <span class="pink">in</span> (<span class="green">'blue', 'red', 'green'</span>):
-        <span class="spacing-8"></span>color(c)
-        <span class="spacing-8"></span>forward(steps)
-        <span class="spacing-8"></span>right(<span class="blue">30</span>)
+        <code>
+          <pre>
+for steps in range(<span class="blue">100</span>):
+    <span class="pink">for</span> c <span class="pink">in</span> (<span class="green">'blue', 'red', 'green'</span>):
+        color(c)
+        forward(steps)
+        right(<span class="blue">30</span>)</pre>
         </code>
         <p>
           - which of course, are limited only by the imagination!
@@ -197,11 +201,12 @@
         <p>
           Next we'll create a loop:
         </p>
-        <code><span class="pink">while True</span>:
-          <span class="spacing-4"></span>forward(<span class="blue">200</span>)
-          <span class="spacing-4"></span>left(<span class="blue">170</span>)
-          <span class="spacing-4"></span><span class="pink">if</span> abs(pos()) <span class="red"><</span> <span class="blue">1</span>:
-          <span class="spacing-8"></span><span class="pink">break</span>
+        <code>
+          <pre><span class="pink">while True</span>:
+    </span>forward(<span class="blue">200</span>)
+    </span>left(<span class="blue">170</span>)
+    </span><span class="pink">if</span> abs(pos()) <span class="red"><</span> <span class="blue">1</span>:
+        </span><span class="pink">break</span></pre>
         </code>
         <p>
           <code class="inline">abs(pos()) < 1</code> is a good way to know when the turtle is back at its home position.

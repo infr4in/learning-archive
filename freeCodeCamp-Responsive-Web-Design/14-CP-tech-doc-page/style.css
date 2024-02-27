@@ -107,7 +107,6 @@ code {
   background-color: #242424;
   color: #7c8590;
   font-size: 1.4rem;
-  white-space: pre-line;
   width: 100%;
   padding: 1.5rem;
   margin: 1rem;
@@ -118,6 +117,10 @@ code.inline {
   display: inline;
   margin: 0;
   padding: 0 2px;
+}
+
+pre {
+  margin: 0;
 }
 
 .pink {
@@ -138,16 +141,6 @@ code.inline {
 
 .red {
   color: #fb464c;
-}
-
-.spacing-4 {
-  display: inline-block;
-  width: 3.2rem;
-}
-
-.spacing-8 {
-  display: inline-block;
-  width: 6.4rem;
 }
 
 ::-webkit-scrollbar {

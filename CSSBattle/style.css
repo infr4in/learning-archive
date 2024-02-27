@@ -76,7 +76,7 @@ body {
 }
 
 /* CSSBattle code */
-#card1 {
+#card-1 {
   .cssb-frame {
     background: #5d3a3a;
 
@@ -88,7 +88,7 @@ body {
   }
 }
 
-#card2 {
+#card-2 {
   .cssb-frame {
     background-color: #62374e;
 
@@ -124,7 +124,7 @@ body {
   }
 }
 
-#card3 {
+#card-3 {
   .cssb-frame {
     background-color: #6592CF;
     
@@ -169,24 +169,30 @@ body {
   }
 }
 
-#card4 {
+#card-4 {
   .cssb-frame {
-    background-color: #E3516E;
+    background: #62306D;
     display: grid;
-    place-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px 100px;
 
-    & div {
-      border-top: 100px solid #51B5A9;
-      border-bottom: 100px solid #E3516E;
-      border-left: 100px solid #F7F3D7;
-      border-right: 100px solid #FADE8B;
-      border-radius: 50%;
-      transform: rotate(-45deg);
+    .fill {
+      background-color: #F7EC7D;
+    }
+  
+    .a {
+      border-radius: 50% 50% 0 0;
+    }
+  
+    .b, .c {
+      border-radius: 0 0 50% 50%;
     }
   }
 }
 
-#card5 {
+#card-5 {
   .cssb-frame {
     background-color: #0B2429;
 
@@ -219,5 +225,452 @@ body {
   }     
 }
 
+#card-6 {
+  .cssb-frame div {
+    border-top: 100px solid #51B5A9;
+    border-bottom: 100px solid #E3516E;
+    border-left: 100px solid #F7F3D7;
+    border-right: 100px solid #FADE8B;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+  }
+
+  .cssb-frame {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    background-color: #E3516E;
+    display: grid;
+    place-items: center;
+  }
+}
+
+#card-7 {
+  .cssb-frame {
+    background-color: #0B2429;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  
+  .cssb-frame div {
+    width: 150px;
+    height: 150px;
+    background: #dd6b4d;
+    border-radius: 66% 0;
+  }
+
+  #a {
+    position: absolute;
+    left: 75px;
+    background: #1A4341;
+  }
+
+  #b {
+    position: absolute;
+    left: 125px;
+    background: #998235;
+  }
+
+  #c {
+    position: absolute;
+    left: 175px;
+    background: #F3AC3C;
+  }
+}
+
+#card-8 {
+  .cssb-frame {
+    background-color: #6592CF;
+  }
+  
+  .fork {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .fork * {
+    position: absolute;
+    background-color: #060F55;
+  }
+
+  .head-base {
+    position: absolute;
+    bottom: 50px;
+    width: 140px;
+    height: 140px;
+    border-radius: 0 0 50% 50%;
+  }
+
+  .head-spear {
+    bottom: 140px;
+    width: 20px;
+    height: 110px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .inner {
+    background-color: #6592CF;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .a {
+    left: 130px;
+  }
+
+  .b {
+    left: 170px;
+  }
+
+  .c {
+    left: 210px;
+  }
+
+  .d {
+    left: 250px;
+  }
+
+  .aa {
+    left: 150px;
+  }
+
+  .bb {
+    left: 190px;
+  }
+
+  .cc {
+    left: 230px;
+  }
+
+  .neck {
+    width: 20px;
+    height: 60px;
+  }
+}
+
+#card-9 {
+  .cssb-frame {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    background-color: #222730;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+    .main {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 150px;
+      background: #4CAAB3;
+    }
+
+    .main * {
+      position: absolute;
+    }
+
+    .outer-square {
+      width: 250px;
+      height: 250px;
+      background: #222730;
+      transform: rotate(45deg);
+    }
+
+    .inner-square {
+      width: 150px;
+      height: 152px;
+      background: #4CAAB3;
+      transform: rotate(45deg);
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #393E46;
+    }
+  }
+}
+
+#card-10 {
+  .cssb-frame {
+    background-color: #62306D;
+  }
+
+  .cssb-frame * {
+    position: absolute;
+  }
+
+  .col {
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+    bottom: 0px;
+  }
+
+  .c1 {
+    left: 50px;
+  }
+
+  .c2 {
+    height: 200px;
+    left: 150px;
+  }
+
+  .c3 {
+    left: 250px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    background: #E38F66;
+    border-radius: 50%;
+    bottom: 50px;
+    border: 20px solid #AA445F;
+  }
+
+  .ci1 {
+    left: 50px
+  }
+
+  .ci2 {
+    left: 150px;
+    bottom: 150px;
+    background: #AA445F;
+    border-color: #E38F66
+  }
+
+  .ci3 {
+    left: 250px;
+  }
+}
+
+#card-11 {
+  .cssb-frame {
+    background-color: #191210;
+    display: grid;
+    place-items: center;
+  }
+
+  .cssb-frame * {
+    position: absolute;
+  }
+
+  .inner {
+    width: 50px;
+    height: 50px;
+    background: #84271C;
+    border-radius: 50%;
+    border: 25px solid #191210;
+  }
+
+  .outer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 20px solid #ECA03D;
+  }
+
+  .side-1 {
+    width: 100px;
+    height: 50px;
+    background: #ECA03D;
+    border-radius: 0 0 50px 50px;
+    left: 50px;
+    bottom: 100px;
+  }
+
+  .side-1-inner {
+    width: 60px;
+    height: 30px;
+    background: #191210;
+    border-radius: 0 0 30px 30px;
+    left: 70px;
+    bottom: 120px;
+  }
+
+  .side-2 {
+    width: 100px;
+    height: 50px;
+    background: #ECA03D;
+    border-radius: 50px 50px 0 0;
+    left: 250px;
+    bottom: 150px;
+  }
+
+  .side-2-inner  {
+    width: 60px;
+    height: 30px;
+    background: #191210;
+    border-radius: 30px 30px 0 0;
+    left: 270px;
+    bottom: 150px;
+  }
+}
+
+#card-12 {
+  .cssb-frame {
+    background-color: #F5D6B4;
+    display: grid;
+    place-items: center;
+  }
+
+  .cssb-frame * {
+    position: absolute
+  }
+
+  .outer {
+    width: 100px;
+    height: 50px;
+    background: #D86F45;
+    border-radius: 50px 50px 0 0;
+    bottom: 150px;
+  }
+
+  .inner {
+    width: 60px;
+    height: 60px;
+    background: #F5D6B4;
+    border-radius: 50%;
+    bottom: 150px;
+  }
+
+  .oh1 {
+    left: 70px;
+    transform: rotate(180deg);
+    bottom: 100px;
+  }
+
+  .oh3 {
+    left: 230px;
+    transform: rotate(180deg);
+    bottom: 100px;
+  }
+
+  .ih1 {
+    left: 90px;
+    bottom: 120px;
+  }
+
+  .ih2 {
+    bottom: 120px;
+  }
+
+  .ih3 {
+    left: 250px;
+    bottom: 120px;
+  }
+
+  .end {
+    width: 20px;
+    height: 20px;
+    background: #D86F45;
+    border-radius: 50%;
+  }
+
+  .a {
+    left: 70px;
+  }
+
+  .b {
+    left: 310px;
+  }
+}
+
+#card-13 {
+  .cssb-frame {
+    background-color: #0B2429;
+  }
+
+  .cssb-frame div {
+    border-bottom: 140px solid transparent;
+    border-left: 140px solid #F3AC3C;
+  }
+}
+
+#card-14 {
+  .cssb-frame {
+    background-color: #F2F2B6;
+    display: grid;
+    place-items: center;
+  }
+
+  .cssb-frame * {
+    position: absolute;
+  }
+  
+  .t1 {
+    border-top: 130px solid #FD4602;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+  }
+
+  .t2 {
+    border-bottom: 130px solid #FD4602;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+  }
+
+  .a1 {
+    left: 60px;
+    border-top-color: #FF6D00;
+  }
+
+  .a2 {
+    left: 80px;
+  }
+
+  .b1 {
+    left: 170px;
+  }
+
+  .b2 {
+    left: 190px;
+    border-bottom-color: #FF6D00;
+  }
+}
+
+#card-15 {
+  .cssb-frame {
+    background-color: #09042A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    background: #7B3F61;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .circle:first-child {
+    margin-right: -50px;
+  }
+  
+  .circle:nth-child(2) {
+    background: #E78481;
+  }
+  
+  .center {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #09042A;
+    transform: rotate(45deg);
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+  }
+}
 
 

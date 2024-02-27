@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forking Crazy</title>
+</head>
+<body>
+  <div class="cssb-frame">
+    <div class="half outer oh1"></div>
+    <div class="half inner ih1"></div>
+    <div class="half outer oh2"></div>
+    <div class="half inner ih2"></div>
+    <div class="half outer oh3"></div>
+    <div class="half inner ih3"></div>
+    <div class="end a"></div>
+    <div class="end b"></div>
+  </div>
+  <style>  
+    .cssb-frame {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 400px;
+      height: 300px;
+      background-color: #F5D6B4;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .cssb-frame * {
+      position: absolute
+    }
+
+    .outer {
+      width: 100px;
+      height: 50px;
+      background: #D86F45;
+      border-radius: 50px 50px 0 0;
+      bottom: 150px;
+    }
+
+    .inner {
+      width: 60px;
+      height: 60px;
+      background: #F5D6B4;
+      border-radius: 50%;
+      bottom: 150px;
+    }
+
+    .oh1 {
+      left: 70px;
+      transform: rotate(180deg);
+      bottom: 100px;
+    }
+
+    .oh3 {
+      left: 230px;
+      transform: rotate(180deg);
+      bottom: 100px;
+    }
+
+    .ih1 {
+      left: 90px;
+      bottom: 120px;
+    }
+
+    .ih2 {
+      bottom: 120px;
+    }
+
+    .ih3 {
+      left: 250px;
+      bottom: 120px;
+    }
+
+    .end {
+      width: 20px;
+      height: 20px;
+      background: #D86F45;
+      border-radius: 50%;
+    }
+
+    .a {
+      left: 70px;
+    }
+
+    .b {
+      left: 310px;
+    }
+  </style>
+</body>
+</html>

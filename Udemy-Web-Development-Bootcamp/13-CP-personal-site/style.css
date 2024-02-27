@@ -1,0 +1,147 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  font-family: 'Bree Serif', serif;
+  line-height: 0.95em;
+}
+
+.flex-container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+  gap: 5%;
+  padding: 2% 10%;
+}
+
+.flex-container > div {
+  display: flex;
+  flex: 1;
+}
+
+.flex-title-text {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.green-box {
+  background-color: #94ab6f;
+}
+
+.white-box {
+  background-color: #fbf6f1;
+}
+
+.white-text {
+  color: #fbf6f1;
+}
+
+.green-text {
+  color: #94ab6f;
+}
+
+.item-img {
+  background-color: #fbf6f1;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-img {
+  width: 95%;
+  height: 95%;
+}
+
+.title-text {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.main-text {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.bottom-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.flex-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-main-text {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.some-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.card-container {
+  align-items: center;
+}
+
+.bottom-container {
+  min-height: 30vh;
+  background-image: url(./assets/lizard.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-container > div {
+  flex: 1;
+  padding: 0% 5%;
+}
+
+.footer-text {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.media-links {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+  .flex-container {
+    flex-direction: column;
+    height: auto;
+    padding: 2% 20%;
+  }
+
+  .card-container {
+    gap: 20px;
+  }
+
+  .title-text {
+    font-size: 1rem;
+  }
+  
+  .bottom-text {
+    font-size: 1rem;
+  }
+
+  .sub-main-text {
+    font-size: 2rem;
+  }
+}

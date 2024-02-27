@@ -1,0 +1,221 @@
+:root {
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-light-cyan: hsl(179, 62%, 47%);
+  --clr-yellow: hsl(71, 73%, 54%);
+  --clr-gray: hsl(204, 43%, 93%);
+  --clr-blue: hsl(218, 22%, 67%);
+  --clr-white: #fff;
+
+  --ff-base: "Karla", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-blue);
+  background: var(--clr-gray);
+
+  /* this project only */
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 1rem 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+/* utility */
+.grid-container {
+  --container-width: 700px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: var(--container-width);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px 0 hsl(204, 43%, 80%);
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    --container-width: 375px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: var(--container-width);
+  }
+}
+
+.flex-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5ch;
+  margin-bottom: 0.7rem;
+  line-height: 1;
+}
+
+.accent {
+  color: var(--clr-yellow);
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+}
+
+.gray {
+  color: var(--clr-gray);
+}
+
+/* sections styling */
+section {
+  --content-padding: 3rem;
+
+  padding: var(--content-padding);
+}
+
+@media (max-width: 700px) {
+  section {
+    --content-padding: 2rem;
+  }
+}
+
+.join {
+  grid-area: 1 / 1 / 1 / -1;
+  background: var(--clr-white);
+}
+
+.monthly-subs {
+  grid-area: 2 / 1 / 2 / 1;
+  background: var(--clr-cyan);
+}
+
+.why-us {
+  grid-area: 2 / 2 / 2 / 2;
+  background: var(--clr-light-cyan);
+}
+
+@media (max-width: 700px) {
+  .join {
+    grid-area: unset;
+  }
+
+  .monthly-subs {
+    grid-area: unset;
+  }
+
+  .why-us {
+    grid-area: unset;
+  }
+}
+
+/* main-section styling */
+.main-section__title {
+  color: var(--clr-cyan);
+  margin-bottom: 1rem;
+}
+
+.main-section p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+/* sub-sections styling */
+.sub-section {
+  color: var(--clr-white);
+}
+
+.sub-section__title {
+  margin-bottom: 1rem;
+}
+
+/* montly-subs-section styling */
+.monthly-subs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.monthly-subs__price {
+  font-size: 2.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.monthly-subs__btn {
+  border: none;
+  width: 100%;
+  height: 3.3rem;
+  color: inherit;
+  font-weight: var(--fw-bold);
+  background: var(--clr-yellow);
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+  .monthly-subs__btn {
+    margin-top: 2rem;
+  }
+}
+
+/* why-us-section styling */
+.why-us__list {
+  color: var(--clr-gray);
+  line-height: 1.5;
+}
