@@ -1,0 +1,74 @@
+#card-1 {
+  .frame {
+    background: linear-gradient(to top right, #451952, #662549);
+  }
+  
+  .numbers {
+    position: relative;
+    height: 100px;
+    width: 200px;
+  
+    .number {
+      position: absolute;
+      box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    .one {
+      background-color: #F39F5A;
+      border-radius: 3px;
+    }
+  
+    .zero {
+      height: 54px;
+      width: 54px;
+      border-radius: 50%;
+      border: 24px solid #F39F5A;
+    }
+  
+    .item1 {
+      height: 40px;
+      width: 20px;
+      left: -16px;
+      transform: rotate(50deg);
+    }
+  
+    .item2 {
+      height: 100px;
+      width: 24px;
+    }
+  
+    .item3 {
+      z-index: -98;
+      left: 17px;
+    }
+  
+    .item4 {
+      z-index: -99;
+      left: 100px;
+    }
+  }
+  
+  .letters {
+    color: #F39F5A;
+    font-family: 'Courier New', 'Courier', sans-serif;
+    
+    .text {
+      display: block;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+    }
+  
+    .big {
+      font-size: 82px;
+      line-height: 60px;
+      margin-top: 6px;
+    }
+    
+    .small {
+      font-size: 23px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+}

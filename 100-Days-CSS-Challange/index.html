@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 Days CSS Challange</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>100 Days CSS Challange</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <main>
-    <ul class="cards">
-      <li id="card-1">
-        <div class="frame">
-          <div class="center">
-            <div class="numbers">
-              <div class="number one item1"></div>
-              <div class="number one item2"></div>
-              <div class="number zero item3"></div>
-              <div class="number zero item4"></div>
-            </div>
-            <div class="letters">
-              <div class="text big">Days</div>
-              <div class="text small">CSS Challenge</div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li id="card-2">
-        <div class="frame">
-          <div class="center">
-            <div class="menu-icon">
-              <div class="line line-1 no-animation"></div>
-              <div class="line line-2 no-animation"></div>
-              <div class="line line-3 no-animation"></div>
+  <body>
+    <main>
+      <ul class="cards">
+        <li id="card-1">
+          <div class="frame">
+            <div class="center">
+              <div class="numbers">
+                <div class="number one item1"></div>
+                <div class="number one item2"></div>
+                <div class="number zero item3"></div>
+                <div class="number zero item4"></div>
+              </div>
+              <div class="letters">
+                <div class="text big">Days</div>
+                <div class="text small">CSS Challenge</div>
+              </div>
             </div>
           </div>
-        </div>
-        <script>
-          const menuIcon = document.querySelector(".menu-icon");
-      
+        </li>
+
+        <li id="card-2">
+          <div class="frame">
+            <div class="center">
+              <div class="menu-icon">
+                <div class="line line-1 no-animation"></div>
+                <div class="line line-2 no-animation"></div>
+                <div class="line line-3 no-animation"></div>
+              </div>
+            </div>
+          </div>
+          <script>
+            const menuIcon = document.querySelector(".menu-icon");
+
             menuIcon.addEventListener("click", () => {
-            menuIcon.classList.toggle("active");
-            menuIcon.querySelectorAll("div").forEach((element) => element.classList.remove("no-animation"));
-          });
-        </script>
-      </li>
+              menuIcon.classList.toggle("active");
+              menuIcon
+                .querySelectorAll("div")
+                .forEach((element) => element.classList.remove("no-animation"));
+            });
+          </script>
+        </li>
 
-      <li id="card-8">
-        <div class="frame">
-          <div class="center">
-            <div class="ball"></div>
-            <div class="ball-container">
-              <div class="blubb-1"></div>
-              <div class="blubb-2"></div>
-              <div class="blubb-3"></div>
-              <div class="blubb-4"></div>
-              <div class="blubb-5"></div>
-              <div class="blubb-6"></div>
-              <div class="blubb-7"></div>
-              <div class="blubb-8"></div>
-              <div class="sparkle-1"></div>
-              <div class="sparkle-2"></div>
-              <div class="sparkle-3"></div>
-              <div class="sparkle-4"></div>
-              <div class="sparkle-5"></div>
-              <div class="sparkle-6"></div>
-              <div class="sparkle-7"></div>
-              <div class="sparkle-8"></div>
-              <div class="sparkle-9"></div>
-              <div class="sparkle-10"></div>
+        <li id="card-8">
+          <div class="frame">
+            <div class="center">
+              <div class="ball"></div>
+              <div class="ball-container">
+                <div class="blubb-1"></div>
+                <div class="blubb-2"></div>
+                <div class="blubb-3"></div>
+                <div class="blubb-4"></div>
+                <div class="blubb-5"></div>
+                <div class="blubb-6"></div>
+                <div class="blubb-7"></div>
+                <div class="blubb-8"></div>
+                <div class="sparkle-1"></div>
+                <div class="sparkle-2"></div>
+                <div class="sparkle-3"></div>
+                <div class="sparkle-4"></div>
+                <div class="sparkle-5"></div>
+                <div class="sparkle-6"></div>
+                <div class="sparkle-7"></div>
+                <div class="sparkle-8"></div>
+                <div class="sparkle-9"></div>
+                <div class="sparkle-10"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
-  </main>
-</body>
-
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
