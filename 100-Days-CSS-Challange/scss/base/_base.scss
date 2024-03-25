@@ -40,6 +40,12 @@ body {
   padding-inline-start: 0;
 }
 
+@media (max-width: 600px) {
+  .cards {
+    --card-gap: 0;
+  }
+}
+
 .cards::after {
   content: "";
   width: var(--frame-width);
@@ -57,6 +63,12 @@ body {
   border-radius: 1rem;
   padding: 1rem;
   transition-duration: 200ms;
+}
+
+@media (max-width: 600px) {
+  .cards li {
+    transform: scale(0.75);
+  }
 }
 
 /*.cards li:hover {

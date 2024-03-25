@@ -36,6 +36,11 @@ body {
   padding-inline-start: 0;
 }
 
+@media (max-width: 600px) {
+  .cards {
+    --card-gap: 0;
+  }
+}
 .cards::after {
   content: "";
   width: var(--frame-width);
@@ -55,6 +60,11 @@ body {
   transition-duration: 200ms;
 }
 
+@media (max-width: 600px) {
+  .cards li {
+    transform: scale(0.75);
+  }
+}
 /*.cards li:hover {
   transform: scale(1.1);
   z-index: 1;
@@ -145,6 +155,10 @@ body {
   letter-spacing: 0.05em;
 }
 
+#card-2 {
+  /* elements animation out */
+  /* elements animation in */
+}
 #card-2 .frame {
   background: #3FAF82;
 }
@@ -154,10 +168,8 @@ body {
   cursor: pointer;
   width: 80px;
   height: calc(var(--line-height) * 3 + var(--line-space) * 2);
-  /* elements animation out */
-  /* elements animation in */
 }
-#card-2 .menu-icon .line {
+#card-2 .line {
   --offsetY: calc(var(--line-height) + var(--line-space));
   /*--cubic-bezier-in: cubic-bezier(0.30, 1, 0.70, 1);
   --cubic-bezier-out: cubic-bezier(1, 0.70, 1, 0.30);*/
@@ -167,23 +179,23 @@ body {
   border-radius: 3px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
 }
-#card-2 .menu-icon .line-1 {
+#card-2 .line-1 {
   animation: animate-line-1-rev 0.7s ease-in-out;
 }
-#card-2 .menu-icon .line-2 {
+#card-2 .line-2 {
   margin: var(--line-space) 0;
   animation: animate-line-2-rev 0.7s ease-in-out;
 }
-#card-2 .menu-icon .line-3 {
+#card-2 .line-3 {
   animation: animate-line-3-rev 0.7s ease-in-out;
 }
-#card-2 .menu-icon .active .line-1 {
+#card-2 .active .line-1 {
   animation: animate-line-1 0.7s forwards;
 }
-#card-2 .menu-icon .active .line-2 {
+#card-2 .active .line-2 {
   animation: animate-line-2 0.7s forwards;
 }
-#card-2 .menu-icon .active .line-3 {
+#card-2 .active .line-3 {
   animation: animate-line-3 0.7s forwards;
 }
 #card-2 .no-animation {
@@ -276,7 +288,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(58deg);
+  transform: rotate(260deg);
 }
 #card-8 .ball-container .blubb-1::after {
   position: absolute;
@@ -296,7 +308,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(119deg);
+  transform: rotate(59deg);
 }
 #card-8 .ball-container .blubb-2::after {
   position: absolute;
@@ -316,7 +328,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(139deg);
+  transform: rotate(152deg);
 }
 #card-8 .ball-container .blubb-3::after {
   position: absolute;
@@ -336,7 +348,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(162deg);
+  transform: rotate(18deg);
 }
 #card-8 .ball-container .blubb-4::after {
   position: absolute;
@@ -356,7 +368,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(241deg);
+  transform: rotate(102deg);
 }
 #card-8 .ball-container .blubb-5::after {
   position: absolute;
@@ -376,7 +388,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(188deg);
+  transform: rotate(266deg);
 }
 #card-8 .ball-container .blubb-6::after {
   position: absolute;
@@ -396,7 +408,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(250deg);
+  transform: rotate(226deg);
 }
 #card-8 .ball-container .blubb-7::after {
   position: absolute;
@@ -416,7 +428,7 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  transform: rotate(142deg);
+  transform: rotate(221deg);
 }
 #card-8 .ball-container .blubb-8::after {
   position: absolute;
@@ -436,7 +448,7 @@ body {
   left: 38px;
   width: 8px;
   height: 8px;
-  transform: rotate(158deg);
+  transform: rotate(289deg);
 }
 #card-8 .ball-container .sparkle-1::after {
   position: absolute;
@@ -456,7 +468,7 @@ body {
   left: 38px;
   width: 9px;
   height: 9px;
-  transform: rotate(123deg);
+  transform: rotate(197deg);
 }
 #card-8 .ball-container .sparkle-2::after {
   position: absolute;
@@ -476,7 +488,7 @@ body {
   left: 38px;
   width: 10px;
   height: 10px;
-  transform: rotate(285deg);
+  transform: rotate(16deg);
 }
 #card-8 .ball-container .sparkle-3::after {
   position: absolute;
@@ -496,7 +508,7 @@ body {
   left: 38px;
   width: 11px;
   height: 11px;
-  transform: rotate(95deg);
+  transform: rotate(59deg);
 }
 #card-8 .ball-container .sparkle-4::after {
   position: absolute;
@@ -516,7 +528,7 @@ body {
   left: 38px;
   width: 12px;
   height: 12px;
-  transform: rotate(218deg);
+  transform: rotate(176deg);
 }
 #card-8 .ball-container .sparkle-5::after {
   position: absolute;
@@ -536,7 +548,7 @@ body {
   left: 38px;
   width: 13px;
   height: 13px;
-  transform: rotate(37deg);
+  transform: rotate(140deg);
 }
 #card-8 .ball-container .sparkle-6::after {
   position: absolute;
@@ -556,7 +568,7 @@ body {
   left: 38px;
   width: 14px;
   height: 14px;
-  transform: rotate(13deg);
+  transform: rotate(258deg);
 }
 #card-8 .ball-container .sparkle-7::after {
   position: absolute;
@@ -576,7 +588,7 @@ body {
   left: 38px;
   width: 15px;
   height: 15px;
-  transform: rotate(113deg);
+  transform: rotate(178deg);
 }
 #card-8 .ball-container .sparkle-8::after {
   position: absolute;
@@ -596,7 +608,7 @@ body {
   left: 38px;
   width: 16px;
   height: 16px;
-  transform: rotate(209deg);
+  transform: rotate(59deg);
 }
 #card-8 .ball-container .sparkle-9::after {
   position: absolute;
@@ -616,7 +628,7 @@ body {
   left: 38px;
   width: 17px;
   height: 17px;
-  transform: rotate(23deg);
+  transform: rotate(277deg);
 }
 #card-8 .ball-container .sparkle-10::after {
   position: absolute;
