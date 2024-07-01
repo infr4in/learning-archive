@@ -132,15 +132,14 @@ const resetGame = () => {
 };
 
 const checkForStraights = (arr) => {
-  const sortedDiceValuesArr = arr.sorted((a, b) => a - b);
+  const sortedDiceValuesArr = arr.sort((a, b) => a - b);
   const uniqueDiceValuesArr = [...new Set(sortedDiceValuesArr)];
   const uniqueDiceValuesStr = uniqueDiceValuesArr.join("");
 
   const smallStraightArr = ["1234", "2345", "3456"];
   const largeStraightArr = ["12345", "23456"];
 
-  if (smallStraightArr.some(
-    straight => uniqueDiceValuesStr.includes(straight))) {
+  if (smallStraightArr.some(straight => uniqueDiceValuesStr.includes(straight))) {
     updateRadioOption(3, 30);
   }
 
