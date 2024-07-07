@@ -1,0 +1,18 @@
+:root {
+  --clr-primary-magenta: hsl(300, 43%, 22%);
+  --clr-primary-pink: hsl(333, 80%, 67%);
+
+  --clr-neutral-dark-gray-magenta: hsl(303, 10%, 53%);
+  --clr-neutral-light-gray-magenta: hsl(300, 24%, 96%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "League Spartan", sans-serif;
+
+  --fs-400: .8125rem;
+  --fs-500: .9625rem;
+  --fs-900: 3rem;
+
+  @media (min-width: 50em) {
+    --fs-900: 3rem;
+  }
+}

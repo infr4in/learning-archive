@@ -1,0 +1,19 @@
+.ratings {
+  li {
+    color: var(--clr-primary-magenta);
+    background: var(--clr-neutral-light-gray-magenta);
+    font-weight: 800;
+    padding: .5rem;
+
+    &::before {
+      content: '';
+      width: 100px;
+      height: 1rem;
+      margin: 0 auto;
+      display: block;
+      background-image: url(../images/icon-star.svg);
+      margin-bottom: .5rem;
+      background-repeat: space;
+    }
+  }
+}
