@@ -1,0 +1,47 @@
+.quotes {
+  --spacer: 2rem;
+
+  li {
+    @media (min-width: 50em) {
+      &:nth-child(2) {
+        transform: translateY(1rem);
+      }
+  
+      &:nth-child(3) {
+        transform: translateY(2rem);
+      }
+    }
+  }
+
+  blockquote {
+    font-size: var(--fs-500);
+    background-color: var(--clr-primary-magenta);
+    color: var(--clr-neutral-white);
+    text-align: left;
+    border-radius: var(--br);
+    padding: calc(var(--spacer) + 1rem) var(--spacer);
+    max-width: 20rem;
+    margin: 0 auto;
+
+    .split {
+      flex-direction: row;
+    }
+  }
+
+  img {
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-weight: 800;
+  }
+
+  .status {
+    color: var(--clr-primary-pink);
+  }
+
+  .quote {
+    margin-top: var(--spacer);
+  }
+}

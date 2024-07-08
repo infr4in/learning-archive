@@ -1,19 +1,47 @@
 .ratings {
+  justify-content: right;
+
   li {
     color: var(--clr-primary-magenta);
     background: var(--clr-neutral-light-gray-magenta);
+    font-size: var(--fs-500);
+    line-height: 1;
     font-weight: 800;
-    padding: .5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--br);
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
 
-    &::before {
-      content: '';
-      width: 100px;
-      height: 1rem;
-      margin: 0 auto;
-      display: block;
-      background-image: url(../images/icon-star.svg);
-      margin-bottom: .5rem;
-      background-repeat: space;
+    @media (min-width: 50em) {
+      display: flex;
+      align-content: center;
+      padding: 1.5rem 2rem;
+      
+      &:first-of-type {
+        transform: translateX(-3rem);
+      }
+
+      &:last-of-type {
+        transform: translateX(3rem);
+      }
+    }
+  }
+
+  img {
+    margin: 0 .15rem .75rem;
+
+    @media (min-width: 50em) {
+      margin: 0 0.15rem 0 0;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+  
+      &:last-of-type {
+        margin-right: 2rem;
+      }
     }
   }
 }
