@@ -1,0 +1,46 @@
+.wrapper {
+  padding-inline: 2rem;
+  max-width: 1250px;
+  margin-inline: auto;
+}
+
+.wrapper--narrow {
+  max-width: 600px;
+}
+
+.layout-grid {
+  --gap: 2rem;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: var(--gap);
+
+  & > * {
+    flex: 1;
+  }
+  
+
+  @media (min-width: 800px) {
+    grid-template-areas: 
+      "... two   ...."
+      "one two   four"
+      "one three four"
+      "... three ....";
+
+    & > :nth-child(1) {
+      grid-area: one;
+    }
+  
+    & > :nth-child(2) {
+      grid-area: two;
+    }
+  
+    & > :nth-child(3) {
+      grid-area: three;
+    }
+  
+    & > :nth-child(4) {
+      grid-area: four;
+    }
+  }
+}

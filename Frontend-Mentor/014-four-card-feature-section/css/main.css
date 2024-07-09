@@ -1,0 +1,181 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --clr-neutral-900: hsl(234, 12%, 34%);
+  --clr-neutral-400: hsl(229, 6%, 66%);
+  --clr-neutral-100: hsl(0, 0%, 98%);
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --ff-primary: "Poppins", sans-serif;
+  --fw-light: 200;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --fs-400: .875rem;
+  --fs-500: .9375rem;
+  --fs-600: 1.25rem;
+  --fs-900: 1.5rem;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-normal);
+  line-height: 1.7;
+  color: var(--clr-neutral-400);
+  padding-block-end: 5rem;
+}
+
+h1, h2 {
+  color: var(--clr-neutral-900);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.wrapper {
+  padding-inline: 2rem;
+  max-width: 1250px;
+  margin-inline: auto;
+}
+
+.wrapper--narrow {
+  max-width: 600px;
+}
+
+.layout-grid {
+  --gap: 2rem;
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: var(--gap);
+}
+.layout-grid > * {
+  flex: 1;
+}
+@media (min-width: 800px) {
+  .layout-grid {
+    grid-template-areas: "... two   ...." "one two   four" "one three four" "... three ....";
+  }
+  .layout-grid > :nth-child(1) {
+    grid-area: one;
+  }
+  .layout-grid > :nth-child(2) {
+    grid-area: two;
+  }
+  .layout-grid > :nth-child(3) {
+    grid-area: three;
+  }
+  .layout-grid > :nth-child(4) {
+    grid-area: four;
+  }
+}
+
+header {
+  text-align: center;
+  margin-block: 6rem;
+}
+header h1 {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-900);
+  margin-bottom: 1rem;
+}
+header h1 span {
+  display: block;
+  font-weight: var(--fw-bold);
+}
+header p {
+  font-size: var(--fs-500);
+}
+@media (min-width: 800px) {
+  header h1 {
+    font-size: 2.25rem;
+  }
+}
+
+.card {
+  --br: 0.325rem;
+  padding: 2rem;
+  border-top: var(--br) solid;
+  border-radius: var(--br);
+  box-shadow: 0 1rem 1.5rem -0.5rem rgba(0, 50, 100, 0.15);
+}
+.card__title {
+  font-size: var(--fs-600);
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.card__img {
+  display: block;
+  margin-left: auto;
+  margin-top: 2.5rem;
+}
+.card p {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-light);
+}
+.card.border-cyan {
+  border-color: var(--clr-cyan);
+}
+.card.border-red {
+  border-color: var(--clr-red);
+}
+.card.border-orange {
+  border-color: var(--clr-orange);
+}
+.card.border-blue {
+  border-color: var(--clr-blue);
+}/*# sourceMappingURL=main.css.map */

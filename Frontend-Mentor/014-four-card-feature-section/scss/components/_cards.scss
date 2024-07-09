@@ -1,0 +1,43 @@
+.card {
+  --br: 0.325rem;
+
+  padding: 2rem;
+  border-top: var(--br) solid;
+  border-radius: var(--br);
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb( 0 50 100 / 0.15);
+
+  &__title {
+    font-size: var(--fs-600);
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  &__img {
+    display: block;
+    margin-left: auto;
+    margin-top: 2.5rem;
+  }
+
+  & p {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-light);
+  }
+
+  &.border-cyan {
+    border-color: var(--clr-cyan);
+  }
+
+  &.border-red {
+    border-color: var(--clr-red);
+  }
+
+  &.border-orange {
+    border-color: var(--clr-orange);
+  }
+
+  &.border-blue {
+    border-color: var(--clr-blue);
+  }
+}
+
+
