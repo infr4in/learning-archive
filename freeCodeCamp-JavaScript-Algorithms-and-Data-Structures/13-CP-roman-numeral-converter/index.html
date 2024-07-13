@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman Numeral Converter</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="converter">
+      <h1 class="converter__title">Roman Numeral Converter</h1>
+
+      <fieldset class="converter__input-area">
+        <label class="converter__label" for="number">Enter a Number:</label>
+        <input class="converter__input" type="number" id="number" />
+        <button class="converter__btn" type="button" id="converter-btn">
+          Convert
+        </button>
+      </fieldset>
+
+      <div class="converter__output-area hidden" id="output"></div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
