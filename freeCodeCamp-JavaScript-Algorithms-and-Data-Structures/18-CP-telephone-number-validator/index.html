@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telephone Number Validator</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="validator">
+      <h1 class="validator__title">Telephone Number Validator</h1>
+
+      <fieldset class="validator__input-area">
+        <label class="validator__label" for="user-input"
+          >Enter a Phone Number:</label
+        >
+        <input class="validator__input" type="text" id="user-input" />
+        <div class="flex">
+          <button
+            class="validator__check-btn"
+            type="button"
+            id="validator-check-btn"
+          >
+            Check
+          </button>
+          <button
+            class="validator__clear-btn"
+            type="button"
+            id="validator-clear-btn"
+          >
+            Clear
+          </button>
+        </div>
+      </fieldset>
+
+      <div class="validator__output-area output hidden" id="output"></div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
